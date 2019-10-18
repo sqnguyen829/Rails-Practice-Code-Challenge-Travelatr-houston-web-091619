@@ -1,0 +1,7 @@
+<h1>Destination</h1>
+
+<% @destinations.each do |destination|%>
+    <li><%= link_to destination.name, destination_path(destination)%><br></li>
+<%end%>
+
+<a href="/destinations/new"><button> Plan your trip...</button><a>

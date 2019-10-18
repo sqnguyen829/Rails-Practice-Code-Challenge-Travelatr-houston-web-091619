@@ -1,0 +1,12 @@
+<h1><%= @post.title%></h1>
+<h2>Content: <%= @post.content%></h2>
+<h4> Likes:<%= @post.likes%></h4>
+<a href="/posts"><button>All Posts</button><a>
+<a href='/posts/<%=@post.id%>/edit'><button> Edit Post</button><a>
+<%= form_for @post, method: :delete do |f|%>
+<%= f.submit "Remove Post"%>
+<%end%> 
+
+<%= button_to 'Like', action: 'like'%>
+<a href='/bloggers/<%=@blogger.id%>'><button>This posts Author</button></a>
+

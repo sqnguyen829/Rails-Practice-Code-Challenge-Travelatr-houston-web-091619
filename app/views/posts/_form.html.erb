@@ -1,0 +1,19 @@
+<% if flash[:errors]%>
+    <% flash[:errors].each do |error|%>
+        <%=error%>
+    <%end%>
+<%end%>
+
+<%=form_for @post do |f|%>
+<%=f.label :post_title %>
+<%=f.text_field :title %>
+<br>
+<%=f.label :post_content %>
+<%=f.text_area :content %>
+<br>
+<%=f.label :Blogger_Name%>
+<%= f.collection_select :blogger_id, @blogger, :id, :name%>
+<%=f.label :Destination%>
+<%= f.collection_select :destination_id, @destination, :id, :name%>
+<%=f.submit%>
+<%end%>

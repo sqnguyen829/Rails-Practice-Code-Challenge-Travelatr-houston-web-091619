@@ -1,0 +1,8 @@
+<h1>Bloggers</h1>
+
+<% @bloggers.each do |blogger|%>
+    <li><%= link_to blogger.name, blogger_path(blogger)%><br></li>
+<%end%>
+
+<a href="/bloggers/new"><button> Start your story...</button><a>
+

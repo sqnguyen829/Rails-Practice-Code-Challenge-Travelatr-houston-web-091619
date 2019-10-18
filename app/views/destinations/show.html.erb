@@ -1,0 +1,7 @@
+<h1><%= @destination.name%></h1>
+<h2>Country: <%= @destination.country%></h2>
+<a href="/destinations"><button>All destinations</button><a>
+<a href='/destinations/<%=@destination.id%>/edit'><button> Edit Destination</button><a>
+<%= form_for @destination, method: :delete do |f|%>
+<%= f.submit "Remove Destination"%>
+<%end%>

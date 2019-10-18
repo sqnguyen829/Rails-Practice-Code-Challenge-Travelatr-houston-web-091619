@@ -1,0 +1,21 @@
+<h1><%= @blogger.name%></h1>
+<h2>Age: <%= @blogger.age%></h2>
+<h4>Who I am... <%= @blogger.bio%></h4>
+ <br>
+ Likes:<%= @total_likes%>
+<br>
+ 
+ <br>
+<a href="/bloggers"><button>All Bloggers</button><a>
+<br>
+<br>
+<a href='/bloggers/<%=@blogger.id%>/edit'><button> Edit Blogger</button><a>
+<%= form_for @blogger, method: :delete do |f|%>
+<br>
+<%= f.submit "Remove Blogger"%>
+<%end%>
+
+<a href='/posts/<%=@most_posts.id%>'><button>Most Liked Post</button></a>
+
+
+

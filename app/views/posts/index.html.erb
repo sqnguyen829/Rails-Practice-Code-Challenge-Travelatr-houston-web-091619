@@ -1,0 +1,8 @@
+<h1>Posts</h1>
+
+<% @posts.each do |post|%>
+    <li><%= link_to post.title, post_path(post)%><br></li>
+<%end%>
+
+<a href="/posts/new"><button> Start your story...</button><a>
+
